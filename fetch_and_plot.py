@@ -1,4 +1,6 @@
 import os
+import matplotlib
+matplotlib.use('Agg')  # non-interactive backend for headless servers
 import yfinance as yf
 from datetime import datetime, timedelta
 import matplotlib.pyplot as plt
