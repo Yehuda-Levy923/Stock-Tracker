@@ -1,14 +1,58 @@
-# Tech
-AAPL
-MSFT
-GOOGL
-TSLA
-META
-NVDA
+# Technology
+AAPL    # Apple
+MSFT    # Microsoft
+GOOGL   # Alphabet Class A
+META    # Meta Platforms
+NFLX    # Netflix
+ORCL    # Oracle
+CSCO    # Cisco
 
-# Finance
-JPM
-V
+# Semiconductors
+NVDA    # Nvidia
+AVGO    # Broadcom
+MU      # Micron Technology
+AMD     # Advanced Micro Devices
+INTC    # Intel
+ASML    # ASML Holding
 
-# Consumer Goods
-AMZN
+# E-Commerce & Retail
+AMZN    # Amazon
+WMT     # Walmart
+COST    # Costco
+HD      # Home Depot
+BABA    # Alibaba
+MCD     # McDonald's
+
+# AI & Data / Disruptive Tech
+TSLA    # Tesla
+PLTR    # Palantir
+
+# Financials
+BRK.B   # Berkshire Hathaway B
+JPM     # JPMorgan Chase
+BAC     # Bank of America
+V       # Visa
+MA      # Mastercard
+
+# Healthcare & Pharma
+LLY     # Eli Lilly
+JNJ     # Johnson & Johnson
+ABBV    # AbbVie
+TMO     # Thermo Fisher Scientific
+
+# Energy
+XOM     # ExxonMobil
+CVX     # Chevron
+
+# Industrials
+CAT     # Caterpillar
+GE      # GE Aerospace
+
+# Consumer Staples
+PG      # Procter & Gamble
+KO      # Coca-Cola
+PEP     # PepsiCo
+
+# Telecom
+VZ      # Verizon
+T       # AT&T

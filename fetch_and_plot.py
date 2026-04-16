@@ -10,8 +10,13 @@ TICKERS_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'tickers
 
 
 def load_tickers():
+    tickers = []
     with open(TICKERS_FILE) as f:
-        return [line.strip().upper() for line in f if line.strip() and not line.startswith('#')]
+        for line in f:
+            line = line.split('#')[0].strip()  # strip inline comments
+            if line:
+                tickers.append(line.upper())
+    return tickers
 
 
 TICKERS = load_tickers()
