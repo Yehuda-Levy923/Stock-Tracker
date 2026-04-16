@@ -1,0 +1,13 @@
+# Tech
+AAPL
+MSFT
+GOOGL
+TSLA
+META
+NVDA
+# Finance
+JPM
+V
+
+# Consumer Goods
+AMZN
