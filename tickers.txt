@@ -5,6 +5,7 @@ GOOGL
 TSLA
 META
 NVDA
+
 # Finance
 JPM
 V

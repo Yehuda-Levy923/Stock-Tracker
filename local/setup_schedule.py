@@ -1,6 +1,8 @@
 import os, sys, platform, subprocess
+
 def setup_schedule():
-    script = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'main.py')
+    # main.py lives one directory up from this script
+    script = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'main.py')
     python = sys.executable
 
     if platform.system() == "Windows":
@@ -25,3 +27,6 @@ def setup_schedule():
         proc = subprocess.Popen(['crontab', '-'], stdin=subprocess.PIPE, text=True)
         proc.communicate(new_cron)
         print("Cron job added. Run 'crontab -l' to check.")
+
+if __name__ == "__main__":
+    setup_schedule()

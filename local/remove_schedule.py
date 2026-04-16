@@ -1,7 +1,8 @@
 import os, sys, platform, subprocess
 
 def remove_schedule():
-    script = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'main.py')
+    # main.py lives one directory up from this script
+    script = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'main.py')
 
     if platform.system() == "Windows":
         task = "DailyStockEmail"
