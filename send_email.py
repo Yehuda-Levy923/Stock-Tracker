@@ -28,9 +28,9 @@ def send_email(rsi_signals):
 
     def signal_label(v):
         if v < 30:
-            return 'Oversold — Buy'
+            return 'Oversold / Buy'
         if v > 70:
-            return 'Overbought — Sell'
+            return 'Overbought / Sell'
         return 'Neutral'
 
     all_rows = ''.join(
@@ -42,7 +42,7 @@ def send_email(rsi_signals):
         for t, v in sorted(rsi_signals.items())
     )
     summary_table = f'''
-    <h3 style="margin-bottom:6px">RSI Summary — All Tracked Stocks</h3>
+    <h3 style="margin-bottom:6px">RSI Summary of All Tracked Stocks</h3>
     <table style="border-collapse:collapse;font-size:14px;min-width:320px">
       <thead>
         <tr style="background:#f5f5f5">
@@ -69,14 +69,14 @@ def send_email(rsi_signals):
         if buy:
             buy_block = f'''
             <div style="background:#f0fff0;border-left:4px solid green;padding:10px 16px;margin:10px 0">
-              <h3 style="color:green;margin:0 0 6px">Buy Signals — RSI below 30 (Oversold)</h3>
+              <h3 style="color:green;margin:0 0 6px">Buy Signals: RSI below 30 (Oversold)</h3>
               <table>{signal_rows(buy, "green")}</table>
             </div>'''
         sell_block = ''
         if sell:
             sell_block = f'''
             <div style="background:#fff0f0;border-left:4px solid #cc0000;padding:10px 16px;margin:10px 0">
-              <h3 style="color:#cc0000;margin:0 0 6px">Sell Signals — RSI above 70 (Overbought)</h3>
+              <h3 style="color:#cc0000;margin:0 0 6px">Sell Signals: RSI above 70 (Overbought)</h3>
               <table>{signal_rows(sell, "#cc0000")}</table>
             </div>'''
         alert_section = f'<h3 style="color:#555;margin-top:20px">Actionable Signals Today</h3>{buy_block}{sell_block}'
@@ -89,7 +89,7 @@ def send_email(rsi_signals):
     html = f'''
     <html><body style="font-family:sans-serif;max-width:700px;margin:auto;color:#222;padding:16px">
     <h2 style="border-bottom:2px solid #ddd;padding-bottom:8px">
-      Daily Stock Update — {datetime.now():%Y-%m-%d}
+      Daily Stock Update {datetime.now():%Y-%m-%d}
     </h2>
     {no_signal_note}
     {alert_section}

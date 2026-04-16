@@ -13,7 +13,7 @@ def setup_schedule():
             "/sc", "daily", "/st", "15:12", "/f"
         ]
         subprocess.run(cmd, check=True)
-        print(f"Done — task '{task}' created. Check Task Scheduler to verify.")
+        print(f"Done. task '{task}' created. Check Task Scheduler to verify.")
     else:
         job = f"0 9 * * * {python} '{script}'"
         result = subprocess.run(['crontab', '-l'], capture_output=True, text=True)

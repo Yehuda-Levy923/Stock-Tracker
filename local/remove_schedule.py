@@ -8,7 +8,7 @@ def remove_schedule():
         task = "DailyStockEmail"
         result = subprocess.run(["schtasks", "/delete", "/tn", task, "/f"], capture_output=True)
         if result.returncode == 0:
-            print(f"Done — task '{task}' removed.")
+            print(f"Done. task '{task}' removed.")
         else:
             print(f"Task '{task}' not found, nothing to remove.")
     else:

@@ -1,6 +1,6 @@
 import os
 import matplotlib
-matplotlib.use('Agg')  # non-interactive backend for headless servers
+matplotlib.use('Agg')
 import yfinance as yf
 from datetime import datetime, timedelta
 import matplotlib.pyplot as plt
@@ -13,7 +13,7 @@ def load_tickers():
     tickers = []
     with open(TICKERS_FILE) as f:
         for line in f:
-            line = line.split('#')[0].strip()  # strip inline comments
+            line = line.split('#')[0].strip()
             if line:
                 tickers.append(line.upper())
     return tickers
@@ -111,7 +111,7 @@ def fetch_and_plot():
         ax1.plot(bb_lower.index, bb_lower, color='gray', linewidth=0.8, linestyle=':')
         ax1.axhline(ceiling, color='orangered', linestyle=':', linewidth=1.5, label=f'1y Resistance: ${ceiling:.2f}')
         ax1.axhline(floor, color='dodgerblue', linestyle=':', linewidth=1.5, label=f'1y Support: ${floor:.2f}')
-        title = f'{ticker} — Past 90 Trading Days'
+        title = f'{ticker}: Past 90 Trading Days'
         if signal_label:
             title += f'  [{signal_label}]'
         ax1.set_title(title, color=title_color, fontweight='bold', fontsize=13)
