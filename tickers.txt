@@ -28,7 +28,7 @@ TSLA    # Tesla
 PLTR    # Palantir
 
 # Financials
-BRK.B   # Berkshire Hathaway B
+BRK-B   # Berkshire Hathaway B
 JPM     # JPMorgan Chase
 BAC     # Bank of America
 V       # Visa
