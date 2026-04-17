@@ -2,9 +2,8 @@ name: Daily Stock Tracker
 
 on:
   schedule:
-    # Runs Mon–Fri at 4:30 PM Eastern (21:30 UTC) after US market close
-    - cron: '30 21 * * 1-5'
-  workflow_dispatch:  # lets you run it manually from the GitHub UI
+    - cron: '30 14 * * 1-5'
+  workflow_dispatch:
 
 jobs:
   run-tracker:
