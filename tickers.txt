@@ -1,3 +1,6 @@
+# Market Indexes
+QQQ     # Technology Index
+SPX     # 500 Top Companies Index
 # Technology
 AAPL    # Apple
 MSFT    # Microsoft
